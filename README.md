@@ -1,7 +1,6 @@
 # ETP-2
 # [🚨Smart Innovation Landslide Early Warning System🚨] ![Soil-erosion-feature-at-Genting-Highlands](https://github.com/user-attachments/assets/6a5ac9bf-4607-4e51-b519-8a0730b5fb58)
 
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -24,17 +23,6 @@ def classify_threat_level(row):
 # ----------------------------------------
 st.set_page_config(page_title="Smart Landslide Early Warning System", layout="wide")
 st.title("🚨 Smart Innovation: Landslide Early Warning System")
-
-# ✅ Dashboard Description
-st.markdown("""
-This dashboard is created to **detect and classify landslide risk levels** based on uploaded sensor data.
-By analyzing **tilt angle**, **soil moisture**, and **rainfall**, the system will automatically classify each reading into:
-- **MILD**
-- **LOW**
-- **HIGH**
-
-Upload your **CSV file** below to begin monitoring.
-""")
 
 # ----------------------------------------
 # 📂 File Uploader
@@ -106,8 +94,7 @@ if st.sidebar.button("Upload and Process"):
         st.dataframe(df_filtered.tail(50), use_container_width=True)
 
         # ----------------------------------------
-        # 📥 Download Button![Soil-erosion-feature-at-Genting-Highlands](https://github.com/user-attachments/assets/783956c4-2935-4cc8-8083-db184a14993a)
-
+        # 📥 Download Button
         # ----------------------------------------
         st.download_button(
             "📥 Download Filtered CSV",
